@@ -1,0 +1,89 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sacgarci <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 22:05:37 by sacgarci          #+#    #+#             */
+/*   Updated: 2024/10/07 22:13:18 by sacgarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+int	main(int argc, char **argv)
+{
+	(void) argc;
+	printf("%d\n", ft_isalnum(argv[1]));
+	printf("%d", isalnum(argv[1]));
+}
+
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+int main(int argc, char **argv)
+{
+    (void) argc;
+    int i = 0;
+    int     a[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+//  char    str[15] = "ok les gars";
+//  ft_memset(a, atoi(argv[1]), atoi(argv[2]));
+    memset(a, atoi(argv[1]), atoi(argv[2]));
+//  printf("%s", str);
+    while (i < 9)
+    {
+        printf("%d\n", a[i]);
+        i++;
+    }
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <bsd/string.h>
+
+int main(int argc, char **argv)
+{
+    (void) argc;
+    char    str[] = "ok les gars";
+
+//  printf("%zu\n", strlcpy(str, argv[1], atoi(argv[2])));
+    printf("%d\n", ft_strlcpy(str, argv[1], atoi(argv[2])));
+    printf("%s", str);
+}
+
+#include <string.h>
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+    (void) argc;
+    char    *str;
+    //str = ft_memchr(argv[1], atoi(argv[2]), atoi(argv[3]));
+    str = memchr(argv[1], atoi(argv[2]), atoi(argv[3]));
+    printf("%s", str);
+}
+
+#include <stdio.h>
+int main(int argc, char **argv)
+{
+    (void) argc;
+    char    **tab;
+    int i;
+
+    tab = ft_split(argv[1], argv[2][0]);
+    i = 0;
+    while (tab[i])
+    {
+        printf("%s\n", tab[i]);
+        i++;
+    }
+}
+   
